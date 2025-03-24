@@ -12,9 +12,9 @@ assessmentButton.addEventListener(
       // 名前が空の時は処理を終了する
       return;
     }
-    
+
     // 診断結果表示エリアの作成
-    resultDivision.innerText = '';    
+    resultDivision.innerText = '';
     const heading = document.createElement('h3');
     heading.innerText = '診断結果';
     resultDivision.appendChild(heading);
@@ -28,9 +28,9 @@ assessmentButton.addEventListener(
     tweetDivision.innerText = '';
     const anchor = document.createElement('a');
     const hrefValue =
-    'https://x.com/intent/tweet?button_hashtag=' +
-    encodeURIComponent('あなたのいいところ') +
-    '&ref_src=twsrc%5Etfw';
+      'https://x.com/intent/tweet?button_hashtag=' +
+      encodeURIComponent('あなたのいいところ') +
+      '&ref_src=twsrc%5Etfw';
 
     anchor.setAttribute('href', hrefValue);
     anchor.setAttribute('class', 'twitter-hashtag-button');
@@ -38,7 +38,7 @@ assessmentButton.addEventListener(
     anchor.innerText = 'Tweet #あなたのいいところ';
 
     tweetDivision.appendChild(anchor);
-    
+
     const script = document.createElement('script');
     script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
     tweetDivision.appendChild(script);
@@ -145,3 +145,5 @@ function test() {
 
   console.log('同じ名前なら、同じ結果を出力することのテスト終了');
 }
+
+test();
